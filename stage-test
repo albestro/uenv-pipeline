@@ -123,6 +123,8 @@ export CSCS_RFM_UENV="${squashfs_path}^${name}:${build_id}"
 export RFM_AUTODETECT_METHODS="cat /etc/xthostname,hostname"
 export RFM_USE_LOGIN_SHELL=1
 
+log "CSCS_RFM_UENV=${CSCS_RFM_UENV}"
+
 REFRAME_COMMAND="reframe -C $PWD/cscs-reframe-tests/config/cscs.py --report-junit=report.xml -r --system=${RFM_SYSTEM} --mode uenv_deployment --failure-stats"
 
 log "running reframe: ${REFRAME_COMMAND}"
